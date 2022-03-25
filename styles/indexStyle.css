@@ -1,0 +1,81 @@
+:root {
+    --dark-bgnd-clr: #1a212e;
+	--text-color-2: #B3D9FF;
+	--light-bgnd-clr: #2b303b;
+    --text-color-1: #80bfff;  
+    --title-anim-dur: 1s;  
+}
+
+body {
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--dark-bgnd-clr);
+}
+
+.title {
+    width: 100%;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+
+@keyframes swipe-up {
+    from {transform: translateY(10rem);}
+    to {transform: translateY(0);}
+}
+
+.heading-wrapper {
+    overflow: hidden;
+}
+
+.heading {
+    font-size: 7rem;
+    color: var(--text-color-1);
+    text-align: center;
+    animation-name: swipe-up;
+    animation-duration: var(--title-anim-dur);
+}
+
+@keyframes underline-grow {
+    from {width: 0;}
+    to {width: 30rem;}
+}
+
+.underline-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+}
+
+.underline {
+    border-top: 0.3rem solid var(--text-color-1);
+    animation-name: underline-grow;
+    animation-duration: var(--title-anim-dur);
+    width: 30rem;
+}
+
+.tagline {
+    color: var(--text-color-1);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
