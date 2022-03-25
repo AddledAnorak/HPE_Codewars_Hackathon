@@ -1,0 +1,20 @@
+Backend Features:
+
+1. SEO
+    a. Filter by category (Dental, Heart, Bones, etc.)
+    b. Filter by name
+    c. Filter by stars
+
+    d. Sort by addr
+    e. Sort by stars
+
+
+Frontend Features:
+
+1. Index Page
+    a. Title
+    b. Filter and Sort options
+    c. List wise hospitals
+
+2. Hospital Page
+    TODO
