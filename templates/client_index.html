@@ -18,11 +18,6 @@
 	</script>
 
 	<script defer>
-		const isInteger = numString => !isNaN(numString) && numString.length !== 0 && !numString.includes('.') && !numString.includes('e');
-		const isFloat = numString => !isNaN(numString) && numString.length !== 0 && !numString.includes('e');
-	</script>
-
-	<script defer>
 		document.addEventListener('DOMContentLoaded', () => {
 			document.querySelector('.submit-btn').addEventListener('click', e => {
 				let otp = prompt(`Enter OTP Sent To ${document.querySelector('.phone-num-inp').value}`);
