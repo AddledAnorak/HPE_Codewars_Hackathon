@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from backend import *
 import random
 
-app = Flask(__name__, template_folder='client_templates', static_folder='static')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 
 @app.route('/')

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from backend import *
 
-app = Flask(__name__, template_folder='hospital_templates', static_folder='static')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 this_hospital = Algorithms.load_hospital(1)
 new_patients = []
 existing_patients = []

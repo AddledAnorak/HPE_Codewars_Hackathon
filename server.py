@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from backend import *
 import random
 
-app = Flask(__name__, template_folder='server_templates', static_folder='static')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 suggestions = {}
 hospital_list = []
 
