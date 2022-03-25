@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Patient Entry Form</title>
+		<link rel="stylesheet" href="../static/styles.css">
+	</head>
+
+	<script defer>
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.range-wrapper').forEach((rangeWrapper, i) => {
+				let rangeInput = rangeWrapper.children[1];
+				let rangeValue = rangeWrapper.children[2];
+
+				rangeInput.addEventListener('input', () => {
+					rangeValue.textContent = `Value: ${rangeInput.value}`;
+				});
+			});
+		});
+	</script>
+
+	<script defer>
+		const isInteger = numString => !isNaN(numString) && numString.length !== 0 && !numString.includes('.') && !numString.includes('e');
+		const isFloat = numString => !isNaN(numString) && numString.length !== 0 && !numString.includes('e');
+	</script>
+
+	<script defer>
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelector('.submit-btn').addEventListener('click', e => {
+				let otp = prompt(`Enter OTP Sent To ${document.querySelector('.phone-num-inp').value}`);
+				if(otp === null) e.preventDefault();
+			});
+		});
+	</script>
+
+	<body>
+
+		<div class="header">
+			<div class="heading" style="font-size:113px;">Patient Entry Form</div>
+			<div class="underline-wrapper"><div class="underline"></div></div>
+			<div class="subtext-hider">
+				<div class="subtext">COVID War Room AI System</div>
+			</div>
+		</div>
+
+
+		<div class="form-wrapper">
+			<form action="/form-submitted" method="post" class="patient-form">
+
+				<div class="name-wrapper input-wrapper">
+					<input type="text" class="inp" placeholder="Name" name="name-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder test-placeholder"></div>
+				</div>
+
+				<div class="age-wrapper input-wrapper">
+					<input type="text" class="inp age-inp" placeholder="Age" name="age-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+
+				<div class="select-gender-wrapper">
+					<span class="gender-select-placeholder">Gender: </span>
+					<select name="gender-inp" class="gender-inp-select" required>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
+				</div>
+
+
+				<div class="pincode-wrapper input-wrapper">
+					<input type="text" class="inp pincode-inp" placeholder="Pincode" name="pincode-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+				<div class="addr-wrapper input-wrapper">
+					<input type="text" class="inp" placeholder="Home Address" name="addr-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+				<div class="phone-num-wrapper input-wrapper">
+					<input type="text" class="inp phone-num-inp" placeholder="Mobile Number" name="phone-num-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+				<div class="temp-wrapper input-wrapper">
+					<input type="text" class="inp temp-inp" placeholder="Body Temperature In °F" name="fever-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+				<div class="oxygen-wrapper input-wrapper">
+					<input type="text" class="inp oxygen-inp" placeholder="Oxygen Levels" name="oxygen-inp" required>
+					<div class="inp-underline-blue"></div>
+					<div class="dummy-placeholder"></div>
+				</div>
+
+
+
+				<div class="cough-wrapper range-wrapper">
+					<div class="specifier">Cough Levels:<br>(1-3: Mild 4-7: Moderate 7-10: Severe)</div>
+					<input type="range" min="0" max="10" name="cough-inp" class="range cough-range" value="0" required>
+					<div class="range-value cough-value">Value: 0</div>
+				</div>
+
+				<div class="breathlessness-wrapper range-wrapper">
+					<div class="specifier">Breathlessness Levels:<br>(1-3: Mild 4-7: Moderate 7-10: Severe)</div>
+					<input type="range" min="0" max="10" name="breathlessness-inp" class="range" value="0" required>
+					<div class="range-value breathlessness-value">Value: 0</div>
+				</div>
+
+				<div class="hrct-wrapper range-wrapper">
+					<div class="specifier">HRCT Scan Levels:</div>
+					<input type="range" min="0" max="25" name="hrct-inp" class="range" value="0" required>
+					<div class="range-value hrct-value">Value: 0</div>
+				</div>
+
+				<input type="submit" value="Submit" class="submit-btn">
+
+			</form>
+		</div>
+
+	</body>
+
+</html>
