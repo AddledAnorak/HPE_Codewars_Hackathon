@@ -13,8 +13,15 @@ Frontend Features:
 
 1. Index Page
     a. Title
-    b. Filter and Sort options
-    c. List wise hospitals
+    b. Blog
+    c. Hospital Search
+    
+2. Hospital Search Page
+    a. Filter and Sort options
+    b. List wise hospitals
 
-2. Hospital Page
+3. Blog Page
+    a. like allen digital
+
+4. Hospital Page
     TODO
