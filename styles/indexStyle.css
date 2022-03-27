@@ -65,10 +65,54 @@ body {
 
 
 
+.option-wrapper {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.index-redirect {
+    height: 15rem;
+    width: 15rem;
+    border: 0.3rem solid var(--text-color-1);
+    border-radius: 1rem;
+    font-size: 3rem;
+    color: var(--text-color-1);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+}
 
 
+.normal-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hover-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: green;
+    transition-duration: 0.5s;
+    font-size: 1.5rem;
+}
 
+.hover-content-span {
+    width: 85%;
+    text-align: center;
+}
+
+.index-redirect:hover .hover-content {
+    transform: translateY(-15rem);
+}
 
 
 
